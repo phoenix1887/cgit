@@ -32,4 +32,5 @@ bash cgit2.sh "https://github.com/user/repo" "" "src" --keep
 # Process modified extension list in specific directories
 bash cgit2.sh "https://github.com/user/repo" "+html,go,-c" "app/html,cloud" --keep
 ```
-
+### Standard Extensions
+c cpp cc cxx java py js ts cs rb php html htm css swift kt kts go rs sh bat pl lua r m vb sql asm sc erl ex exs hs dart pas groovy f for f90 v vh sv pyx clj cljs md tsx jsx yaml yml json ini cfg xml ipynb
