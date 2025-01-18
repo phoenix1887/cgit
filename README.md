@@ -23,14 +23,17 @@
 ### Examples
 
 ```bash
-# Concatonate .go and .txt files in app/ and cmd/ directories
+# Concatonate all files with default extensions in repo
+bash cgit2.sh "https://github.com/user/repo"
+
+# Concatonate .go and .txt files in app/ and cmd/ directories, keep downloaded copy of repo
 bash cgit2.sh "https://github.com/user/repo" "go,txt" "app,cmd" --keep
 
 # Concatonate default extensions only in the src/ directory
-bash cgit2.sh "https://github.com/user/repo" "" "src" --keep
+bash cgit2.sh "https://github.com/user/repo" "" "src"
 
 # Process modified extension list in specific directories
-bash cgit2.sh "https://github.com/user/repo" "+html,go,-c" "app/html,cloud" --keep
+bash cgit2.sh "https://github.com/user/repo" "+html,go,-c" "app/html,cloud"
 ```
-### Standard Extensions
+### Default Extensions
 c cpp cc cxx java py js ts cs rb php html htm css swift kt kts go rs sh bat pl lua r m vb sql asm sc erl ex exs hs dart pas groovy f for f90 v vh sv pyx clj cljs md tsx jsx yaml yml json ini cfg xml ipynb
