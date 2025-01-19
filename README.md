@@ -21,24 +21,29 @@
 
 1. Choose your preferred method:
 
-   **Option A: Git Bash (Recommended)**
+   **Option A: PowerShell (Recommended)**
    - Install Git for Windows from [git-scm.com](https://git-scm.com/download/windows)
-   - During installation, select "Git Bash" option
-   - Right-click in your desired folder
-   - Select "Git Bash Here"
-   - Run script: `./cgit.sh` or `bash cgit.sh`
-
-   **Option B: PowerShell**
-   - Install Git for Windows from [git-scm.com](https://git-scm.com/download/windows)
+   - During installation, ensure "Git from the command line..." is selected
+   - This installation includes Git and Bash which will be available in PowerShell
    - Open PowerShell
    - Navigate to script directory
    - Run script: `bash cgit.sh`
 
-   **Option C: Command Prompt (CMD)**
+   **Option B: Command Prompt (CMD)**
    - Install Git for Windows from [git-scm.com](https://git-scm.com/download/windows)
+   - During installation, ensure "Git from the command line..." is selected
+   - This installation includes Git and Bash which will be available in CMD
    - Open Command Prompt
    - Navigate to script directory
    - Run script: `bash cgit.sh`
+
+   **Option C: Git Bash**
+   - Install Git for Windows from [git-scm.com](https://git-scm.com/download/windows)
+   - During installation, select "Git Bash" option
+   - This installation provides a dedicated Bash terminal with Git included
+   - Right-click in your desired folder
+   - Select "Git Bash Here"
+   - Run script: `./cgit.sh` or `bash cgit.sh`
 </details>
 
 #### macOS
@@ -79,23 +84,23 @@
 ```bash
 ./cgit.sh REPO_URL [EXTENSIONS] [DIRECTORIES] [--keep]
 # or
-bash cgit2.sh REPO_URL [EXTENSIONS] [DIRECTORIES] [--keep]
+bash cgit.sh REPO_URL [EXTENSIONS] [DIRECTORIES] [--keep]
 ```
 
 ### Examples
 
 ```bash
 # Concatonate all files with default extensions in entire repo
-bash cgit2.sh "https://github.com/user/repo"
+bash cgit.sh "https://github.com/user/repo"
 
 # Concatonate .go and .txt files in app/ and cmd/ directories, keep downloaded copy of repo
-bash cgit2.sh "https://github.com/user/repo" "go,txt" "app,cmd" --keep
+bash cgit.sh "https://github.com/user/repo" "go,txt" "app,cmd" --keep
 
 # Concatonate default extensions only in the src/ directory
-bash cgit2.sh "https://github.com/user/repo" "" "src"
+bash cgit.sh "https://github.com/user/repo" "" "src"
 
 # Process modified extension list in specific directories
-bash cgit2.sh "https://github.com/user/repo" "+html,go,-c" "app/html,cloud"
+bash cgit.sh "https://github.com/user/repo" "+html,go,-c" "app/html,cloud"
 ```
-### Default Code FileExtensions
+### Default Code File Extensions
 c cpp cc cxx java py js ts cs rb php html htm css swift kt kts go rs sh bat pl lua r m vb sql asm sc erl ex exs hs dart pas groovy f for f90 v vh sv pyx clj cljs md tsx jsx yaml yml json ini cfg xml ipynb
